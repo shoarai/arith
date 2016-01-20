@@ -1,7 +1,8 @@
 //--------------------------------------------------//
-// 名前：Matrix.cpp                                	//
-// 機能：行列計算																			//
-// Copyright(C) 2013 shoarai, all rights reserved.  //
+// File Name: Matrix.cpp                            //
+// Function: Matrix calicuration                    //
+// Copyright(C) 2013 shoarai                        //
+// The MIT License (MIT)                            //
 //--------------------------------------------------//
 
 //------------------------------------------//

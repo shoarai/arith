@@ -1,7 +1,8 @@
 //--------------------------------------------------//
-// 名前：Vector.cpp                                  //
-// 機能：ベクトル計算                                	//
-// Copyright(C) 2013 shoarai, all rights reserved.  //
+// File Name: Vector.cpp                            //
+// Function: Vector calicuration                    //
+// Copyright(C) 2013 shoarai                        //
+// The MIT License (MIT)                            //
 //--------------------------------------------------//
 
 //------------------------------------------//
