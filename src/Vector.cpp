@@ -1,6 +1,6 @@
 //--------------------------------------------------//
 // File Name: Vector.cpp                            //
-// Function: Vector calicuration                    //
+// Function: Vector calculation                     //
 // Copyright(C) 2013 shoarai                        //
 // The MIT License (MIT)                            //
 //--------------------------------------------------//

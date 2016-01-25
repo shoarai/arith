@@ -1,0 +1,13 @@
+//--------------------------------------------------//
+// File Name: Arith.h                               //
+// Function: arithmetic calculation                 //
+// Copyright(C) 2013 shoarai                        //
+// The MIT License (MIT)                            //
+//--------------------------------------------------//
+#ifndef _ARITH_H_
+#define _ARITH_H_
+
+#include "Vector.h"
+#include "Matrix.h"
+
+#endif  // _ARITH_

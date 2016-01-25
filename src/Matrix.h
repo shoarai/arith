@@ -1,6 +1,6 @@
 //--------------------------------------------------//
 // File Name: Matrix.h                              //
-// Function: Matrix calicuration                    //
+// Function: Matrix calculation                     //
 // Copyright(C) 2013 shoarai                        //
 // The MIT License (MIT)                            //
 //--------------------------------------------------//
