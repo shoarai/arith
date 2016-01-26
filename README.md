@@ -2,7 +2,7 @@
 Arithmetic program - vector and matrix
 
 ### Usage
-Include "arith/src/Vector.h" file.
+Include "arith/src/Vector.h" file to calculate vectors.
 
 ```cpp
 #include <iostream>
@@ -58,7 +58,7 @@ int main()
 }
 ```
 
-Include "arith/src/Matrix.h" file.
+Include "arith/src/Matrix.h" file to calculate matrixes.
 
 ```cpp
 #include <iostream>
