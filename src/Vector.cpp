@@ -1,7 +1,7 @@
 //--------------------------------------------------//
 // File Name: Vector.cpp                            //
 // Function: Vector calculation                     //
-// Copyright(C) 2013 shoarai                        //
+// Copyright(C) 2016 shoarai                        //
 // The MIT License (MIT)                            //
 //--------------------------------------------------//
 
@@ -10,6 +10,8 @@
 //------------------------------------------//
 #include <math.h>
 #include "Vector.h"
+
+namespace arith {
 
 //------------------------------------------//
 //              関           数              //
@@ -160,4 +162,6 @@ Vector Vector::normalize() const
     vecAns /= vecAns.norm();
 
     return vecAns;
+}
+
 }

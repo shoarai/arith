@@ -1,7 +1,7 @@
 //--------------------------------------------------//
 // File Name: SquareMatrix.cpp                      //
 // Function: Square matrix calculation              //
-// Copyright(C) 2013 shoarai                        //
+// Copyright(C) 2016 shoarai                        //
 // The MIT License (MIT)                            //
 //--------------------------------------------------//
 

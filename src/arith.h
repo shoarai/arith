@@ -1,7 +1,7 @@
 //--------------------------------------------------//
 // File Name: Arith.h                               //
 // Function: arithmetic calculation                 //
-// Copyright(C) 2013 shoarai                        //
+// Copyright(C) 2016 shoarai                        //
 // The MIT License (MIT)                            //
 //--------------------------------------------------//
 #ifndef _ARITH_H_

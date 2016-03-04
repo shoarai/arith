@@ -1,7 +1,7 @@
 //--------------------------------------------------//
 // File Name: Matrix.cpp                            //
 // Function: Matrix calculation                     //
-// Copyright(C) 2013 shoarai                        //
+// Copyright(C) 2016 shoarai                        //
 // The MIT License (MIT)                            //
 //--------------------------------------------------//
 

@@ -1,7 +1,7 @@
 //--------------------------------------------------//
 // File Name: SquareMatrix.h                        //
 // Function: Square matrix calculation              //
-// Copyright(C) 2013 shoarai                        //
+// Copyright(C) 2016 shoarai                        //
 // The MIT License (MIT)                            //
 //--------------------------------------------------//
 #ifndef _SQUARE_MATRIX_H_
@@ -18,7 +18,7 @@
 //------------------------------------------//
 class SquareMatrix : public Matrix{
 public:
-    Cunsigned int num;  // 行列の行数（＝列数）
+    unsigned int num;  // 行列の行数（＝列数）
 
 public:
     // コンストラクタ

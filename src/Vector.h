@@ -1,11 +1,13 @@
 //--------------------------------------------------//
 // File Name: Vector.h                              //
 // Function: Vector calculation                     //
-// Copyright(C) 2013 shoarai                        //
+// Copyright(C) 2016 shoarai                        //
 // The MIT License (MIT)                            //
 //--------------------------------------------------//
 #ifndef _VECTOR_H_
 #define _VECTOR_H_
+
+namespace arith {
 
 //------------------------------------------//
 //              ク　ラ　ス                    //
@@ -83,6 +85,8 @@ inline void Vector::sety(const double &y)
 inline void Vector::setz(const double &z)
 {
     m_z = z;
+}
+
 }
 
 #endif  // _VECTOR_H_

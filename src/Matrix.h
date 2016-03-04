@@ -1,7 +1,7 @@
 //--------------------------------------------------//
 // File Name: Matrix.h                              //
 // Function: Matrix calculation                     //
-// Copyright(C) 2013 shoarai                        //
+// Copyright(C) 2016 shoarai                        //
 // The MIT License (MIT)                            //
 //--------------------------------------------------//
 #ifndef _MATRIX_H_
@@ -17,8 +17,8 @@
 //------------------------------------------//
 class Matrix{
 public:
-    Cunsigned int m_row;    // 行
-    Cunsigned int m_col;    // 列
+    unsigned int m_row;    // 行
+    unsigned int m_col;    // 列
 
     double** val;   // 行列要素用ポインタ
 //  vector< vector<double> > val;
