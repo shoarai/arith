@@ -8,13 +8,15 @@
 //------------------------------------------//
 //              インクルード              		//
 //------------------------------------------//
-#include "Vector.h"
+#include "Matrix.h"
 #include <string>
 
 //------------------------------------------//
 //              名　前　空　間             	 //
 //------------------------------------------//
 using namespace std;
+
+namespace arith {
 
 // 行列要素を初期化する
 Matrix::Matrix(unsigned int row, unsigned int col) : m_row(row), m_col(col)
@@ -93,7 +95,7 @@ Matrix::~Matrix()
 // 行列要素を取得する
 double& Matrix::operator()(unsigned int row, unsigned int col)
 {
-    return val[row-1][col-1];
+    return val[row][col];
 }
 
 // 代入演算子
@@ -234,7 +236,7 @@ Matrix Matrix::operator*(const Matrix& mat) const
 }
 
 // 行列と値の乗算
-Matrix Matrix::operator*(CDBL& in_val) const
+Matrix Matrix::operator*(const double& in_val) const
 {
     // 解となる行列
     Matrix matAns(m_row, m_col);
@@ -251,7 +253,7 @@ Matrix Matrix::operator*(CDBL& in_val) const
 }
 
 // 行列と値の乗算
-Matrix& Matrix::operator*=(CDBL& in_val)
+Matrix& Matrix::operator*=(const double& in_val)
 {
     for(unsigned int i = 0; i < m_row; i++)
     {
@@ -265,7 +267,7 @@ Matrix& Matrix::operator*=(CDBL& in_val)
 }
 
 // 行列と値の除算
-Matrix Matrix::operator/(CDBL& in_val) const
+Matrix Matrix::operator/(const double& in_val) const
 {
     // 解となる行列
     Matrix matAns(m_row, m_col);
@@ -282,7 +284,7 @@ Matrix Matrix::operator/(CDBL& in_val) const
 }
 
 // 行列と値の除算
-Matrix& Matrix::operator/=(CDBL& in_val)
+Matrix& Matrix::operator/=(const double& in_val)
 {
     for(unsigned int i = 0; i < m_row; i++)
     {
@@ -303,11 +305,13 @@ Matrix Matrix::transpose() const
 
     for(unsigned int i = 0; i < m_row; i++)
     {
-        for(unsigned int j = 0;j < m_col; j++)
+        for(unsigned int j = 0; j < m_col; j++)
         {
-            matAns.val[i][j] = val[j][i];
+            matAns.val[j][i] = val[i][j];
         }
     }
 
     return matAns;
+}
+
 }
