@@ -8,13 +8,15 @@
 //------------------------------------------//
 //              インクルード              		//
 //------------------------------------------//
-#include "Vector.h"
+#include "SquareMatrix.h"
 #include <string>
 
 //------------------------------------------//
 //              名　前　空　間             	 //
 //------------------------------------------//
 using namespace std;
+
+namespace arith {
 
 //------------------------------------------//
 //              関           数              //
@@ -67,21 +69,21 @@ SquareMatrix& SquareMatrix::operator=(const Matrix& mat)
 }
 
 // キャスト演算子オーバーロード
-SquareMatrix::operator Matrix()
-{
-    Matrix matAns(num, num);
-
-    // 値代入
-    for(unsigned int i = 0; i < num; i++)
-    {
-        for(unsigned int j = 0; j < num; j++)
-        {
-            matAns.val[i][j] = val[i][j];
-        }
-    }
-
-    return matAns;
-}
+// SquareMatrix::operator Matrix()
+// {
+//     Matrix matAns(num, num);
+//
+//     // 値代入
+//     for(unsigned int i = 0; i < num; i++)
+//     {
+//         for(unsigned int j = 0; j < num; j++)
+//         {
+//             matAns.val[i][j] = val[i][j];
+//         }
+//     }
+//
+//     return matAns;
+// }
 
 // 余因子を求める
 double SquareMatrix::cofactor(unsigned int row, unsigned int col) const
@@ -252,7 +254,7 @@ double SquareMatrix::det() const
 }
 
 // 逆行列算出
-SquareMatrix SquareMatrix::invrs(CDBL& deter) const
+SquareMatrix SquareMatrix::invrs(const double& deter) const
 {
     // 行列式を求める
 //  double det = this->det();
@@ -356,4 +358,6 @@ double SquareMatrix::trace() const
     }
 
     return ans;
+}
+
 }

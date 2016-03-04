@@ -10,8 +10,9 @@
 //------------------------------------------//
 //              インクルード                  //
 //------------------------------------------//
-#include <string>
 #include "Matrix.h"
+
+namespace arith {
 
 //------------------------------------------//
 //              ク　ラ　ス                   //
@@ -31,7 +32,7 @@ public:
     SquareMatrix& operator=(const Matrix&);
 
     // 行列クラスへのキャスト
-    operator Matrix();
+    // operator Matrix();
 
     double    det()  const;                     // 行列式
     SquareMatrix invrs(const double& det) const;   // 逆行列
@@ -42,5 +43,7 @@ private:
     double    trace()  const;               // 対角和
     SquareMatrix adjMat() const;               // 余因子行列
 };
+
+}
 
 #endif  // _SQUARE_MATRIX_H_

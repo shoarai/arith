@@ -9,5 +9,6 @@
 
 #include "Vector.h"
 #include "Matrix.h"
+#include "SquareMatrix.h"
 
 #endif  // _ARITH_
