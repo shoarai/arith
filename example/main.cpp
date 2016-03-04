@@ -16,6 +16,7 @@ int main()
 {
     calcVetor();
     calcMatrix();
+    calcSquareMatrix();
   	return 0;
 }
 
@@ -106,9 +107,6 @@ void calcSquareMatrix() {
     // Convert a matrix with the same number of rows and columns
     // into square matrix type
     SquareMatrix smatB = matA;
-
-    // Convert a square matrix into matrix type
-    // Matrix matB = smatB;
 
     // Determinant
     double det = smatA.det();

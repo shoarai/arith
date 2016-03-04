@@ -26,13 +26,10 @@ public:
     SquareMatrix(const Matrix&);          // コピーコンストラクタ
     virtual ~SquareMatrix(){};            // デストラクタ
 
-    // 正方行列の代入
-    SquareMatrix& operator=(const Matrix&);
+    SquareMatrix& operator=(const Matrix&);   // 正方行列の代入
+    // operator      Matrix();                   // 行列クラスへのキャスト
 
-    // 行列クラスへのキャスト
-    // operator Matrix();
-
-    double       det()  const;                     // 行列式
+    double       det() const;                      // 行列式
     SquareMatrix invrs(const double& det) const;   // 逆行列
 
 private:
