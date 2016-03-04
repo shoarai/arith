@@ -5,12 +5,12 @@
 // The MIT License (MIT)                            //
 //--------------------------------------------------//
 #include "../src/arith.h"
-#include <stdio.h>
 
 using namespace arith;
 
 void calcVetor();
 void calcMatrix();
+void calcSquareMatrix();
 
 int main()
 {
@@ -62,7 +62,7 @@ void calcVetor () {
 }
 
 void calcMatrix() {
-    // Initialize the number of row and columns
+    // Initialize the number of rows and columns
     Matrix matA(3, 2);
     Matrix matB(3, 2);
 
@@ -95,4 +95,26 @@ void calcMatrix() {
 
     // Transpose
     matA = matD.transpose();
+}
+
+void calcSquareMatrix() {
+    // Initialize the number of rows and columns
+    SquareMatrix smatA(3);
+
+    Matrix matA(2, 2);
+
+    // Convert a matrix with the same number of rows and columns
+    // into square matrix type
+    SquareMatrix smatB = matA;
+
+    // Convert a square matrix into matrix type
+    // Matrix matB = smatB;
+
+    // Determinant
+    double det = smatA.det();
+
+    // Inverse matrix
+    if(det != 0){
+        SquareMatrix smatC = smatA.invrs(det);
+    }
 }
