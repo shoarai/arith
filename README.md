@@ -1,103 +1,157 @@
 # arith
-Arithmetic program - vector and matrix
+Arithmetic program - vector and matrix calculation
+
+### Features
+#### Vector calculation
+* Set and get elements of a vector
+* Addition and subtraction of vectors
+* Multiplication and division of a vector and a scholar
+* Cross product
+* Inner product
+* Norm
+* Normalization
+
+#### Matrix calculation
+* Set and get elements of a matrix
+* Addition and subtraction of matrixes
+* Multiplication and division of matrixes
+* Multiplication and division of a matrix and a scholar
+* Transpose
+
+#### Square Matrix calculation
+* Determinant
+* Inverse matrix
 
 ### Usage
-Include "arith/src/Vector.h" file to calculate vectors.
+Include "src/arith.h" file
+
+### Example
+Vector calculation
 
 ```cpp
-#include <iostream>
-#include "arith/src/Vector.h"
+#include "arith/src/arith.h"
 
-using namespace std;
+using namespace arith;
 
 int main()
 {
-    // Initialize
-    Vector vecA;
-    Vector vecB(1, 10, 100);
+  // Initialize x, y and z elements
+  Vector vecA;
+  Vector vecB(1, 10, 100);
 
-    // Set elements
-    vecA.set(1, 2, 3);
+  // Set elements
+  vecA.set(1, 2, 3);
 
-    // Get elements
-    double x = vecA.getx();	// x axis
-    double y = vecA.gety();	// y axis
-    double z = vecA.getz();	// z axis
+  // Get elements
+  double x = vecA.getx();
+  double y = vecA.gety();
+  double z = vecA.getz();
 
-    Vector vecC;
+  Vector vecC;
 
-    // Addition and subtraction of vectors
-    vecC  = vecA + vecB;
-    vecC += vecA;
-    vecC  = vecA - vecB;
-    vecC -= vecA;
+  // Addition and subtraction of vectors
+  vecC  = vecA + vecB;
+  vecC += vecA;
+  vecC  = vecA - vecB;
+  vecC -= vecA;
 
-    int val = 10;
+  int val = 10;
 
-    // Multiplication and division of a vector and a scholar
-    vecC  = vecA * val;
-    vecC *= val;
-    vecC  = vecA / val;
-    vecC /= val;
+  // Multiplication and division of a vector and a scholar
+  vecC  = vecA * val;
+  vecC *= val;
+  vecC  = vecA / val;
+  vecC /= val;
 
-    // Cross product
-    vecC  = vecA * vecB;
-    vecC *= vecA;
+  // Cross product
+  vecC = vecA * vecB;
 
-    // Inner product
-    vecC  = vecA / vecB;
-    vecC /= vecA;
+  // Inner product
+  double inner = vecA % vecB;
 
-    // Norm
-    double norm = vecA.norm();
+  // Norm
+  double norm = vecA.norm();
 
-    // Normalization
-    vecC = vecA.normarize();
+  // Normalization
+  vecC = vecA.normalize();
 
 	return 0;
 }
 ```
 
-Include "arith/src/Matrix.h" file to calculate matrixes.
+Matrix calculation
 
 ```cpp
-#include <iostream>
-#include "arith/src/Matrix.h"
+#include "arith/src/arith.h"
 
-using namespace std;
+using namespace arith;
 
 int main
 {
-    // Initialize
-    Matrix matA(3, 2);
-    Matrix matB(3, 2);
+  // Initialize the number of rows and columns
+  Matrix matA(3, 2);
+  Matrix matB(3, 2);
 
-    // Get elements
-    double a01 = Matrix(0, 1);
-    double a32 = Matrix(3, 2);
+  // Set elements
+  matA(0, 1) = 10;
+  matB(2, 2) = 20;
 
-    // Addition and subtraction of matrixes
-    Matrix matC = matA + matB;
-    matC += matA;
-    matC  = matA - matB;
-    matC -= matB;
+  // Get elements
+  double a01 = matA(0, 1);
+  double b22 = matB(2, 2);
 
-    Matrix matD(2, 3);
+  // Addition and subtraction of matrixes
+  Matrix matC = matA + matB;
+  matC += matA;
+  matC  = matA - matB;
+  matC -= matB;
 
-    // Multiplication and division of matrixes
-    Matrix matE = matA * matD;
+  Matrix matD(2, 3);
 
-    int val = 10;
+  // Multiplication and division of matrixes
+  Matrix matE = matD * matA;
 
-    // Multiplication and division of a matrix and a scholar
-    matE  = matA * val;
-    matE *= val;
-    matE  = matA / val;
-    matE /= val;
+  int val = 10;
 
-    // Transpose
-    Matrix matF = matA.transpose();
+  // Multiplication and division of a matrix and a scholar
+  matA  = matB * val;
+  matA *= val;
+  matA  = matB / val;
+  matA /= val;
 
-    return 0;
+  // Transpose
+  matA = matD.transpose();
+
+	return 0;
+}
+```
+
+Square matrix calculation
+
+```cpp
+#include "arith/src/arith.h"
+
+using namespace arith;
+
+int main
+{
+  // Initialize the number of rows and columns
+  SquareMatrix smatA(3);
+
+  Matrix matA(2, 2);
+
+  // Convert a matrix with the same number of rows and columns
+  // into square matrix type
+  SquareMatrix smatB = matA;
+
+  // Determinant
+  double det = smatA.det();
+
+  // Inverse matrix
+  if(det != 0){
+      SquareMatrix smatC = smatA.invrs(det);
+  }
+
+	return 0;
 }
 ```
