@@ -26,7 +26,7 @@ Arithmetic program - vector and matrix calculation
 Include "src/arith.h" file
 
 ### Example
-Vector calculation
+#### Vector calculation
 
 ```cpp
 #include "arith/src/arith.h"
@@ -79,7 +79,7 @@ int main()
 }
 ```
 
-Matrix calculation
+#### Matrix calculation
 
 ```cpp
 #include "arith/src/arith.h"
@@ -126,7 +126,7 @@ int main
 }
 ```
 
-Square matrix calculation
+#### Square matrix calculation
 
 ```cpp
 #include "arith/src/arith.h"
