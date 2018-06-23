@@ -94,11 +94,11 @@ int main
 
   // Set elements
   matA(0, 1) = 10;
-  matB(1, 2) = 20;
+  matB(2, 1) = 20;
 
   // Get elements
   double a01 = matA(0, 1);
-  double b12 = matB(1, 2);
+  double b21 = matB(2, 1);
 
   // Addition and subtraction of matrixes
   Matrix matC = matA + matB;
